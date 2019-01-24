@@ -16,9 +16,14 @@ class Controller
 
 	def index_gossips
 	index = Gossip.all
-	
+
     @view.index_gossips(index)
 
 	end
 
+	def delete_gossip
+	index = Gossip.all
+	d = @view.choice_gossip(index)
+	Gossip.delete(d)
+	end
 end

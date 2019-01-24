@@ -17,4 +17,20 @@ class View
     end
   end
 
+
+
+def choice_gossip(gossips)
+	puts "Voici la liste des potins"
+	j=0
+	gossips.each do |i|
+		puts "#{j}: L'auteur: #{i.author} Son potin:#{i.content}"
+		j += 1
+	end
+	puts 'quel potin veux tu supprimer?'
+	print ">"
+	choice = gets.chomp.to_i
+	return choice
+
+end
+
 end
